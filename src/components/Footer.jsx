@@ -61,11 +61,11 @@ export default function Footer({ onOpenLegal, onNavigate }) {
             </div>
 
             <p className="text-sm text-warm-300/80 leading-relaxed max-w-sm">
-              Anand Realty is your premier real estate advisory partner in Dubai. Delivering transparent property solutions, off-market developer allocations, and full-service asset management for NRI and international investors.
+              Anand Realty is your trusted real estate partner in India. Delivering transparent property solutions, verified residential homes, and commercial advisory across prime Indian cities.
             </p>
 
             <div className="pt-2 text-xs text-warm-300/60 font-medium">
-              RERA Certified • Dubai Land Department Licensed Brokerage
+              RERA Compliant • Trusted Real Estate Advisory in India
             </div>
           </div>
 
@@ -185,7 +185,7 @@ export default function Footer({ onOpenLegal, onNavigate }) {
         {/* Copyright & Disclaimer Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-warm-300/60">
           <div>
-            &copy; 2026 by Anand Realty L.L.C. All Rights Reserved.
+            &copy; 2026 by Anand Realty. All Rights Reserved.
           </div>
           <div className="flex items-center gap-4">
             <button

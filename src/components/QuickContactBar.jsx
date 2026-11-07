@@ -15,7 +15,6 @@ export default function QuickContactBar() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
-    // Simulate real demo submission
     setTimeout(() => {
       setLoading(false);
       setSubmitted(true);
@@ -36,7 +35,7 @@ export default function QuickContactBar() {
               Connect With Our Advisory Desk
             </h2>
             <p className="mt-3 text-sm text-warm-300/80 leading-relaxed">
-              Have a question about high-yield off-plan developments, Golden Visa residency, or prime secondary acquisitions in Dubai? Submit your requirement below.
+              Have a question about residential apartments, luxury villas, commercial properties, or investment opportunities in India? Submit your requirement below.
             </p>
 
             <div className="mt-6 space-y-3.5 text-sm text-warm-200">
@@ -76,7 +75,7 @@ export default function QuickContactBar() {
                 </div>
                 <h3 className="font-serif text-xl font-bold text-warm-50">Inquiry Received</h3>
                 <p className="text-sm text-warm-300 max-w-md mx-auto">
-                  Thank you for connecting with Anand Realty. Our Senior Property Consultant will reach out via WhatsApp/Phone within 30 minutes during business hours.
+                  Thank you for connecting with Anand Realty. Our Property Advisory Team will reach out via WhatsApp/Phone within business hours.
                 </p>
                 <button
                   type="button"
@@ -99,7 +98,7 @@ export default function QuickContactBar() {
                     <input
                       type="text"
                       required
-                      placeholder="e.g. Rahul Verma"
+                      placeholder="e.g. Rajesh Kumar"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       className="w-full px-3.5 py-2.5 rounded-lg bg-dark-950 border border-dark-700 text-warm-100 text-sm placeholder-dark-700 focus:outline-none focus:border-gold-400 transition-colors"
@@ -113,7 +112,7 @@ export default function QuickContactBar() {
                     <input
                       type="email"
                       required
-                      placeholder="e.g. rahul@example.com"
+                      placeholder="e.g. rajesh@example.com"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       className="w-full px-3.5 py-2.5 rounded-lg bg-dark-950 border border-dark-700 text-warm-100 text-sm placeholder-dark-700 focus:outline-none focus:border-gold-400 transition-colors"
@@ -127,7 +126,7 @@ export default function QuickContactBar() {
                     <input
                       type="tel"
                       required
-                      placeholder="+971 50 123 4567"
+                      placeholder="+91 98765 43210"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       className="w-full px-3.5 py-2.5 rounded-lg bg-dark-950 border border-dark-700 text-warm-100 text-sm placeholder-dark-700 focus:outline-none focus:border-gold-400 transition-colors"
@@ -142,7 +141,7 @@ export default function QuickContactBar() {
                   <textarea
                     required
                     rows="3"
-                    placeholder="Tell us what you are looking for (e.g. 2BHK off-plan investment in Business Bay or Dubai Hills, budget AED 2M - 3M, Golden Visa eligibility)..."
+                    placeholder="Tell us what you are looking for (e.g. 2/3 BHK apartment, luxury villa, commercial plot, budget ₹50 Lakhs - ₹2 Crore)..."
                     value={formData.requirement}
                     onChange={(e) => setFormData({ ...formData, requirement: e.target.value })}
                     className="w-full px-3.5 py-2.5 rounded-lg bg-dark-950 border border-dark-700 text-warm-100 text-sm placeholder-dark-700 focus:outline-none focus:border-gold-400 transition-colors resize-none"
@@ -171,4 +170,3 @@ export default function QuickContactBar() {
     </section>
   );
 }
-

@@ -46,7 +46,7 @@ export default function LeadModal({ isOpen, onClose }) {
               Consultation Scheduled
             </h3>
             <p className="text-sm text-warm-300 max-w-sm mx-auto">
-              Our Senior Property Advisor will reach out via WhatsApp/Phone shortly to review your criteria.
+              Our Property Advisor will reach out via WhatsApp/Phone shortly to review your criteria.
             </p>
             <button
               onClick={onClose}
@@ -64,7 +64,7 @@ export default function LeadModal({ isOpen, onClose }) {
               Get in Touch with Anand Realty
             </h3>
             <p className="text-xs text-warm-300/80 mt-1 mb-6">
-              Fill in your details and our advisory desk in Business Bay will contact you.
+              Fill in your details and our advisory desk will contact you promptly.
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-4">
@@ -75,7 +75,7 @@ export default function LeadModal({ isOpen, onClose }) {
                 <input
                   type="text"
                   required
-                  placeholder="e.g. Anand Sharma"
+                  placeholder="e.g. Rajesh Kumar"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   className="w-full px-3.5 py-2.5 rounded-lg bg-dark-950 border border-dark-700 text-warm-100 text-sm placeholder-dark-700 focus:outline-none focus:border-gold-400"
@@ -89,7 +89,7 @@ export default function LeadModal({ isOpen, onClose }) {
                 <input
                   type="email"
                   required
-                  placeholder="e.g. anand@company.com"
+                  placeholder="e.g. rajesh@example.com"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   className="w-full px-3.5 py-2.5 rounded-lg bg-dark-950 border border-dark-700 text-warm-100 text-sm placeholder-dark-700 focus:outline-none focus:border-gold-400"
@@ -103,7 +103,7 @@ export default function LeadModal({ isOpen, onClose }) {
                 <input
                   type="tel"
                   required
-                  placeholder="+971 50 123 4567"
+                  placeholder="+91 98765 43210"
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                   className="w-full px-3.5 py-2.5 rounded-lg bg-dark-950 border border-dark-700 text-warm-100 text-sm placeholder-dark-700 focus:outline-none focus:border-gold-400"
@@ -117,7 +117,7 @@ export default function LeadModal({ isOpen, onClose }) {
                 <textarea
                   required
                   rows="3"
-                  placeholder="Type your requirement (e.g. 2BHK off-plan investment in Business Bay or Dubai Hills, budget AED 2M - 3M)..."
+                  placeholder="Type your requirement (e.g. 2/3 BHK apartment in prime area, budget ₹75 Lakhs - ₹1.5 Cr)..."
                   value={formData.requirement}
                   onChange={(e) => setFormData({ ...formData, requirement: e.target.value })}
                   className="w-full px-3.5 py-2.5 rounded-lg bg-dark-950 border border-dark-700 text-warm-100 text-sm placeholder-dark-700 focus:outline-none focus:border-gold-400 resize-none"
@@ -139,4 +139,3 @@ export default function LeadModal({ isOpen, onClose }) {
     </div>
   );
 }
-

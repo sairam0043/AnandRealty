@@ -1,21 +1,21 @@
 # Anand Realty — Official Luxury Real Estate Web Application
 
-A modern, high-performance luxury real estate web portal built for **Anand Realty**, inspired by top-tier Dubai property advisory platforms.
+A modern, high-performance luxury real estate web portal built for **Anand Realty**, serving premier residential and commercial properties in India.
 
 ---
 
 ## 🌟 Highlights & Features
 
 - **Full-Width Luxury Aesthetic**: Designed with deep obsidian backgrounds (`#0C1117`), champagne gold accents (`#D4AF37`), Cinzel serif display typography, and smooth responsive layout across mobile, tablet, and desktop screens.
-- **Hero & Value Proposition**: High-impact Dubai skyline backdrop, value statement (*"Built on Loyalty, Transparency & Trust"*), quick consultation shortcuts, and trust badges.
+- **Hero & Value Proposition**: High-impact modern luxury architecture backdrop, value statement (*"Built on Loyalty, Transparency & Trust"*), quick consultation shortcuts, and RERA verification trust badges.
 - **Immediate Requirement Capture**: Interactive lead form placed directly below the hero banner (Name, Email, Phone, Requirement text area) with real-time feedback and state reset.
 - **Our Expertise (Services)**:
-  - *Buy & Sell Properties* (Residential & Commercial Brokerage)
-  - *Investment Guidance* (Strategic Real Estate Advisory)
+  - *Buy & Sell Properties* (Residential & Commercial Brokerage across India)
+  - *Investment Guidance* (Strategic Real Estate Advisory & High-Growth Corridors)
   * *Property Management* (Asset & Tenancy Management)
   * Interactive **"LEARN MORE" modal dialogs** providing detailed service breakdowns and client checklists.
-- **About Anand Realty**: Authentic presentation of company mission, vision, and core pillars (*Integrity & Trust, Client-First Focus, Market Knowledge*) with Dubai architecture imagery.
-- **Full Contact Section & Office Card**: Dedicated consultation form with budget selectors, Business Bay headquarters address, telephone dialer, email client link, and direct WhatsApp chat.
+- **About Anand Realty**: Authentic presentation of company mission, vision, and core pillars (*Integrity & Trust, Client-First Focus, Market Knowledge*).
+- **Full Contact Section & Office Card**: Dedicated consultation form with INR budget selectors (Lakhs & Crores), corporate office address, telephone dialer, email client link, and direct WhatsApp chat.
 - **Global Footer & Compliance Modals**: Fast navigation, custom social links (Instagram, YouTube, Facebook), back-to-top button, and interactive **Privacy Policy** and **Accessibility Statement** modals.
 - **Floating Actions**: Floating WhatsApp launcher and direct telephone button.
 
@@ -58,7 +58,7 @@ Anand Realty/
 │   │   ├── QuickContactBar.jsx # Quick requirement capture form
 │   │   ├── ServicesSection.jsx # Services grid + detail modal
 │   │   ├── AboutSection.jsx  # About Anand Realty & core pillars
-│   │   ├── ContactSection.jsx # Full contact form & Business Bay card
+│   │   ├── ContactSection.jsx # Full contact form & Corporate office card
 │   │   ├── Footer.jsx        # Global footer & social links
 │   │   ├── LeadModal.jsx     # "Get In Touch" popup consultation modal
 │   │   ├── LegalModal.jsx    # Privacy policy & accessibility statement modal

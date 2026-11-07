@@ -1,6 +1,6 @@
 import React from 'react';
 import { siteConfig } from '../data/websiteData';
-import { ArrowUpRight, Phone, Mail, MapPin, ShieldCheck, Sparkles } from 'lucide-react';
+import { ArrowUpRight, Phone, MapPin, ShieldCheck, Sparkles } from 'lucide-react';
 
 export default function Hero({ onOpenContact }) {
   const scrollToSection = (id) => {
@@ -13,8 +13,8 @@ export default function Hero({ onOpenContact }) {
       {/* Background Image / Ambient Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=2000&q=85"
-          alt="Dubai Skyline and Luxury Real Estate"
+          src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=2000&q=85"
+          alt="Luxury Real Estate and Architecture"
           className="w-full h-full object-cover object-center scale-105 filter brightness-[0.38] contrast-105"
         />
         {/* Gradients */}
@@ -27,7 +27,7 @@ export default function Hero({ onOpenContact }) {
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-dark-900/80 border border-gold-400/30 backdrop-blur-md mb-6 shadow-xl shadow-gold-500/5 animate-pulse">
           <Sparkles className="w-3.5 h-3.5 text-gold-400" />
           <span className="text-xs font-semibold tracking-widest uppercase text-gold-400">
-            Premier Real Estate Advisory • Dubai & International
+            Premier Real Estate Advisory • India
           </span>
         </div>
 
@@ -43,7 +43,7 @@ export default function Hero({ onOpenContact }) {
 
         {/* Subtitle / Value Proposition */}
         <p className="mt-4 text-sm sm:text-base md:text-lg text-warm-300/80 max-w-3xl font-normal leading-relaxed">
-          Your trusted real estate partner in Dubai, delivering transparent property solutions, exclusive off-plan developer allocations, and hands-on portfolio management for global investors and NRIs.
+          Your trusted real estate partner in India, delivering transparent property solutions, premium residential homes, luxury villas, and commercial real estate guidance.
         </p>
 
         {/* Call to Actions */}
@@ -72,7 +72,7 @@ export default function Hero({ onOpenContact }) {
             </div>
             <div>
               <div className="text-xs text-warm-300/60 uppercase tracking-wider font-medium">Headquarters</div>
-              <div className="text-sm font-semibold text-warm-100 mt-0.5">Business Bay, Dubai, UAE</div>
+              <div className="text-sm font-semibold text-warm-100 mt-0.5">India</div>
             </div>
           </div>
 
@@ -94,7 +94,7 @@ export default function Hero({ onOpenContact }) {
             </div>
             <div>
               <div className="text-xs text-warm-300/60 uppercase tracking-wider font-medium">Verification</div>
-              <div className="text-sm font-semibold text-warm-100 mt-0.5">DLD Licensed & Escrow Protected</div>
+              <div className="text-sm font-semibold text-warm-100 mt-0.5">RERA Compliant & Verified Listings</div>
             </div>
           </div>
         </div>
@@ -102,4 +102,3 @@ export default function Hero({ onOpenContact }) {
     </section>
   );
 }
-

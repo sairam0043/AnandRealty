@@ -36,10 +36,10 @@ export default function Navbar({ onOpenContact, onNavigate }) {
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
           <div className="flex items-center gap-2 text-center sm:text-left">
             <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-gold-400/10 text-gold-400 font-medium text-[11px] border border-gold-400/20">
-              <Award className="w-3 h-3 text-gold-400" /> Dubai Real Estate Advisory
+              <Award className="w-3 h-3 text-gold-400" /> Premier Real Estate Advisory • India
             </span>
             <span className="hidden md:inline text-warm-300/60">•</span>
-            <span className="hidden md:inline">Operating Mon - Sat: 10:00 AM - 6:00 PM (GST)</span>
+            <span className="hidden md:inline">{siteConfig.hours}</span>
           </div>
 
           <div className="flex items-center gap-5">
@@ -181,7 +181,7 @@ export default function Navbar({ onOpenContact, onNavigate }) {
                 Get In Touch
               </button>
               <div className="text-center text-xs text-warm-300/70 pt-2">
-                Office 1802, O-14 Tower, Business Bay, Dubai
+                Corporate Office, India
               </div>
             </div>
           </div>
@@ -190,4 +190,3 @@ export default function Navbar({ onOpenContact, onNavigate }) {
     </>
   );
 }
-

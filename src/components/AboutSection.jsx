@@ -18,21 +18,21 @@ export default function AboutSection({ onOpenContact }) {
               
               <div className="relative rounded-2xl overflow-hidden bg-dark-900 border border-dark-700 shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1000&q=85"
-                  alt="Dubai Prime Real Estate Architecture"
+                  src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=85"
+                  alt="Modern Luxury Real Estate in India"
                   className="w-full h-[460px] object-cover filter brightness-95 contrast-105"
                 />
                 
                 {/* Gradient Card Overlay with Office & Brand Focus */}
                 <div className="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-dark-950 via-dark-950/85 to-transparent">
                   <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gold-400/20 border border-gold-400/40 text-gold-400 text-xs font-semibold uppercase tracking-wider mb-2">
-                    Anand Realty
+                    Anand Realty • India
                   </div>
                   <h3 className="font-serif text-2xl font-bold text-warm-50">
                     Built on Loyalty and Trust
                   </h3>
                   <p className="text-xs text-warm-300/80 mt-1.5 leading-relaxed">
-                    Headquartered in Business Bay, Dubai — dedicated to transparent real estate solutions and client-first property advisory.
+                    Dedicated to transparent real estate solutions, trusted documentation, and client-first property advisory across India.
                   </p>
                 </div>
               </div>
@@ -52,11 +52,11 @@ export default function AboutSection({ onOpenContact }) {
             </div>
 
             <p className="text-base sm:text-lg text-warm-200 font-light leading-relaxed">
-              Welcome to <strong className="text-gold-400 font-semibold">Anand Realty</strong>, your trusted partner in the real estate market. We specialize in simplifying real estate investments by offering a transparent, hands-on approach to property acquisition, management, and strategic portfolio building.
+              Welcome to <strong className="text-gold-400 font-semibold">Anand Realty</strong>, your trusted partner in the Indian real estate market. We specialize in simplifying property buying, selling, and leasing by offering a completely transparent, hands-on approach to homeownership, commercial investments, and strategic portfolio building.
             </p>
 
             <p className="text-sm sm:text-base text-warm-300/85 leading-relaxed">
-              At Anand Realty, we aim to provide long-term advisory to our clients, offering carefully selected opportunities and end-to-end support. Our team is committed to making your real estate investment journey as seamless and successful as possible, catering to clients locally and globally with a keen interest in prime real estate.
+              At Anand Realty, our objective is to provide reliable, long-term advisory to our clients. We offer carefully verified property opportunities, clear legal paperwork support, and end-to-end guidance to make your property journey seamless, safe, and successful.
             </p>
 
             {/* Core Pillars */}
@@ -64,19 +64,19 @@ export default function AboutSection({ onOpenContact }) {
               <div className="p-4 rounded-xl bg-dark-900 border border-dark-800">
                 <ShieldCheck className="w-6 h-6 text-gold-400 mb-2" />
                 <h4 className="font-serif text-base font-bold text-warm-100">Integrity & Trust</h4>
-                <p className="text-xs text-warm-300/70 mt-1">Clear, honest guidance and complete transparency throughout every transaction.</p>
+                <p className="text-xs text-warm-300/70 mt-1">Honest market guidance, verified properties, and complete transaction transparency.</p>
               </div>
 
               <div className="p-4 rounded-xl bg-dark-900 border border-dark-800">
                 <HeartHandshake className="w-6 h-6 text-gold-400 mb-2" />
                 <h4 className="font-serif text-base font-bold text-warm-100">Client-First Focus</h4>
-                <p className="text-xs text-warm-300/70 mt-1">We walk with you every step of the way, from property selection to handover.</p>
+                <p className="text-xs text-warm-300/70 mt-1">We walk with you every step of the way, from property shortlisting to final registry.</p>
               </div>
 
               <div className="p-4 rounded-xl bg-dark-900 border border-dark-800">
                 <Eye className="w-6 h-6 text-gold-400 mb-2" />
                 <h4 className="font-serif text-base font-bold text-warm-100">Market Knowledge</h4>
-                <p className="text-xs text-warm-300/70 mt-1">Curated real estate opportunities aligned with your personal and financial goals.</p>
+                <p className="text-xs text-warm-300/70 mt-1">Curated real estate opportunities aligned with your budget and lifestyle preferences.</p>
               </div>
             </div>
 

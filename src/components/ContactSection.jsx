@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { siteConfig } from '../data/websiteData';
-import { Send, Phone, Mail, MapPin, Clock, CheckCircle2, MessageSquare } from 'lucide-react';
+import { Send, Phone, Mail, MapPin, Clock, CheckCircle2 } from 'lucide-react';
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
-    serviceInterest: 'Off-Plan Investment',
-    budget: 'AED 1.5M - 3M',
+    serviceInterest: 'Residential Apartment / Flat',
+    budget: '₹50 Lakhs - ₹1 Crore',
     message: ''
   });
   const [submitted, setSubmitted] = useState(false);
@@ -37,7 +37,7 @@ export default function ContactSection() {
           </h2>
           <div className="w-16 h-1 bg-gradient-to-r from-gold-500 to-gold-300 mx-auto mt-4 rounded-full" />
           <p className="mt-4 text-warm-300/80 text-sm sm:text-base leading-relaxed">
-            Whether you are searching for your dream residence, exploring off-plan allocations, or expanding an international property portfolio, Anand Realty is with you every step of the way.
+            Whether you are searching for your dream home, exploring new residential projects, or investing in commercial real estate across India, Anand Realty is with you every step of the way.
           </p>
         </div>
 
@@ -50,7 +50,7 @@ export default function ContactSection() {
                 Contact Information
               </h3>
               <p className="text-sm text-warm-300/80 leading-relaxed">
-                Connect directly with our central desk in Business Bay, Dubai. Private appointments and virtual video consultations are available upon request.
+                Connect directly with our advisory team. Consultations and property inquiries are attended promptly by our advisors.
               </p>
 
               <div className="space-y-5 text-sm">
@@ -109,7 +109,7 @@ export default function ContactSection() {
               <div className="p-4 rounded-xl bg-dark-950 border border-gold-400/20 flex items-center justify-between">
                 <div>
                   <div className="text-xs font-bold text-gold-400 uppercase tracking-wider">Fast Response</div>
-                  <div className="text-xs text-warm-300/70 mt-0.5">Connect on WhatsApp within seconds</div>
+                  <div className="text-xs text-warm-300/70 mt-0.5">Connect on WhatsApp for instant assistance</div>
                 </div>
                 <a
                   href={siteConfig.socials.whatsapp}
@@ -135,7 +135,7 @@ export default function ContactSection() {
                     Thank You for Connecting
                   </h3>
                   <p className="text-sm text-warm-300 max-w-md mx-auto leading-relaxed">
-                    Your inquiry has been routed to our Senior Client Advisory Team. A consultant will review your specifications and contact you shortly.
+                    Your inquiry has been received. Our Property Advisory Team will review your specifications and contact you shortly.
                   </p>
                   <button
                     onClick={() => {
@@ -144,8 +144,8 @@ export default function ContactSection() {
                         name: '',
                         email: '',
                         phone: '',
-                        serviceInterest: 'Off-Plan Investment',
-                        budget: 'AED 1.5M - 3M',
+                        serviceInterest: 'Residential Apartment / Flat',
+                        budget: '₹50 Lakhs - ₹1 Crore',
                         message: ''
                       });
                     }}
@@ -164,7 +164,7 @@ export default function ContactSection() {
                       <input
                         type="text"
                         required
-                        placeholder="e.g. Anand Sharma"
+                        placeholder="e.g. Rajesh Kumar"
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         className="w-full px-4 py-3 rounded-lg bg-dark-950 border border-dark-700 text-warm-100 text-sm placeholder-dark-700 focus:outline-none focus:border-gold-400 transition-colors"
@@ -178,7 +178,7 @@ export default function ContactSection() {
                       <input
                         type="email"
                         required
-                        placeholder="e.g. anand@company.com"
+                        placeholder="e.g. rajesh@example.com"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         className="w-full px-4 py-3 rounded-lg bg-dark-950 border border-dark-700 text-warm-100 text-sm placeholder-dark-700 focus:outline-none focus:border-gold-400 transition-colors"
@@ -189,12 +189,12 @@ export default function ContactSection() {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div>
                       <label className="block text-xs uppercase tracking-wider text-warm-300 font-medium mb-1.5">
-                        Phone Number with Country Code *
+                        Phone Number *
                       </label>
                       <input
                         type="tel"
                         required
-                        placeholder="+971 50 123 4567"
+                        placeholder="+91 98765 43210"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         className="w-full px-4 py-3 rounded-lg bg-dark-950 border border-dark-700 text-warm-100 text-sm placeholder-dark-700 focus:outline-none focus:border-gold-400 transition-colors"
@@ -210,39 +210,40 @@ export default function ContactSection() {
                         onChange={(e) => setFormData({ ...formData, serviceInterest: e.target.value })}
                         className="w-full px-4 py-3 rounded-lg bg-dark-950 border border-dark-700 text-warm-100 text-sm focus:outline-none focus:border-gold-400 transition-colors"
                       >
-                        <option value="Off-Plan Investment">Off-Plan High-Yield Investment</option>
-                        <option value="Luxury Villa or Penthouse">Luxury Villa or Penthouse</option>
-                        <option value="Commercial Office / Retail">Commercial Office or Full Floor</option>
-                        <option value="Property Management">Full Property Management</option>
-                        <option value="Golden Visa Advisory">Golden Visa & Residency Advisory</option>
+                        <option value="Residential Apartment / Flat">Residential Apartment / Flat</option>
+                        <option value="Luxury Villa / Independent House">Luxury Villa / Independent House</option>
+                        <option value="Commercial Office / Retail Space">Commercial Office / Retail Space</option>
+                        <option value="Residential Plot / Land">Residential Plot / Land</option>
+                        <option value="Property Management">Property Management & Leasing</option>
                       </select>
                     </div>
                   </div>
 
                   <div>
                     <label className="block text-xs uppercase tracking-wider text-warm-300 font-medium mb-1.5">
-                      Target Investment Budget (AED)
+                      Target Budget (INR)
                     </label>
                     <select
                       value={formData.budget}
                       onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
                       className="w-full px-4 py-3 rounded-lg bg-dark-950 border border-dark-700 text-warm-100 text-sm focus:outline-none focus:border-gold-400 transition-colors"
                     >
-                      <option value="Under AED 2,000,000">Under AED 2,000,000</option>
-                      <option value="AED 2,000,000 - 5,000,000">AED 2,000,000 - 5,000,000</option>
-                      <option value="AED 5,000,000 - 10,000,000">AED 5,000,000 - 10,000,000</option>
-                      <option value="Above AED 10,000,000">Above AED 10,000,000</option>
+                      <option value="Under ₹50 Lakhs">Under ₹50 Lakhs</option>
+                      <option value="₹50 Lakhs - ₹1 Crore">₹50 Lakhs - ₹1 Crore</option>
+                      <option value="₹1 Crore - ₹2.5 Crore">₹1 Crore - ₹2.5 Crore</option>
+                      <option value="₹2.5 Crore - ₹5 Crore">₹2.5 Crore - ₹5 Crore</option>
+                      <option value="Above ₹5 Crore">Above ₹5 Crore (Luxury Estate)</option>
                     </select>
                   </div>
 
                   <div>
                     <label className="block text-xs uppercase tracking-wider text-warm-300 font-medium mb-1.5">
-                      Your Requirement & Specifics *
+                      Your Requirement & Preferred Location *
                     </label>
                     <textarea
                       required
                       rows="4"
-                      placeholder="Please mention preferred communities (e.g. Business Bay, Downtown, Dubai Hills, Palm Jumeirah), timeline, and any specific questions..."
+                      placeholder="Please mention your preferred city/locality, property specifications, budget, and timeline..."
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       className="w-full px-4 py-3 rounded-lg bg-dark-950 border border-dark-700 text-warm-100 text-sm placeholder-dark-700 focus:outline-none focus:border-gold-400 transition-colors resize-none"
@@ -267,4 +268,3 @@ export default function ContactSection() {
     </section>
   );
 }
-

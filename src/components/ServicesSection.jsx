@@ -25,7 +25,7 @@ export default function ServicesSection({ onOpenContact }) {
           </h2>
           <div className="w-16 h-1 bg-gradient-to-r from-gold-500 to-gold-300 mx-auto mt-4 rounded-full" />
           <p className="mt-4 text-warm-300/80 text-sm sm:text-base leading-relaxed">
-            At Anand Realty, we focus on what matters most — delivering measurable real estate solutions, safeguarding investor wealth, and unlocking high-yielding opportunities across the UAE.
+            At Anand Realty, we focus on what matters most — delivering measurable real estate solutions, safeguarding client investments, and unlocking prime residential and commercial opportunities across India.
           </p>
         </div>
 
