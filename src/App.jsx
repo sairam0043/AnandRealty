@@ -22,7 +22,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-dark-950 text-warm-100 selection:bg-gold-400 selection:text-dark-950 flex flex-col font-sans">
+    <div className="min-h-screen bg-slate-50 text-slate-900 selection:bg-gold-400 selection:text-white flex flex-col font-sans">
       {/* Navigation */}
       <Navbar 
         onOpenContact={() => setLeadModalOpen(true)} 

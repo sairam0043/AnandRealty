@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { siteConfig } from '../data/websiteData';
-import { Phone, MessageCircle, ArrowUp } from 'lucide-react';
+import { Phone, MessageCircle } from 'lucide-react';
 
 export default function FloatingActions({ onOpenContact }) {
   return (
@@ -8,9 +8,9 @@ export default function FloatingActions({ onOpenContact }) {
       {/* Quick Consultation Pill */}
       <button
         onClick={onOpenContact}
-        className="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-full bg-dark-900/90 border border-gold-400/40 text-gold-400 text-xs font-bold uppercase tracking-wider shadow-2xl backdrop-blur-md hover:bg-gold-400 hover:text-dark-950 transition-all group"
+        className="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-200 text-slate-800 text-xs font-bold uppercase tracking-wider shadow-xl backdrop-blur-md hover:bg-slate-50 hover:text-gold-600 transition-all group"
       >
-        <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
+        <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
         <span>Advisory Desk Online</span>
       </button>
 
@@ -18,7 +18,7 @@ export default function FloatingActions({ onOpenContact }) {
         {/* Call Button */}
         <a
           href={`tel:${siteConfig.phone}`}
-          className="w-12 h-12 rounded-full bg-dark-900 border border-dark-700 hover:border-gold-400/60 text-warm-200 hover:text-gold-400 flex items-center justify-center shadow-2xl transition-all"
+          className="w-12 h-12 rounded-full bg-white border border-slate-200 hover:border-gold-400 text-slate-800 hover:text-gold-600 flex items-center justify-center shadow-xl transition-all"
           title="Call Anand Realty"
           aria-label="Call Anand Realty"
         >
@@ -30,7 +30,7 @@ export default function FloatingActions({ onOpenContact }) {
           href={siteConfig.socials.whatsapp}
           target="_blank"
           rel="noreferrer"
-          className="w-14 h-14 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white flex items-center justify-center shadow-2xl shadow-emerald-900/40 hover:scale-105 transition-all"
+          className="w-14 h-14 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white flex items-center justify-center shadow-2xl shadow-emerald-600/30 hover:scale-105 transition-all"
           title="Chat on WhatsApp"
           aria-label="Chat on WhatsApp"
         >
@@ -40,4 +40,3 @@ export default function FloatingActions({ onOpenContact }) {
     </div>
   );
 }
-
