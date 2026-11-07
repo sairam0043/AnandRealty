@@ -52,8 +52,12 @@ export default function Footer({ onOpenLegal, onNavigate }) {
           {/* Brand Info */}
           <div className="lg:col-span-4 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center font-serif font-bold text-slate-950 text-xl shadow-md shadow-gold-500/10">
-                A
+              <div className="w-12 h-12 rounded-full overflow-hidden border border-slate-200 shadow-sm bg-white flex items-center justify-center p-0.5">
+                <img 
+                  src="/logo.png" 
+                  alt="Anand Realty Logo" 
+                  className="w-full h-full object-contain rounded-full"
+                />
               </div>
               <span className="font-serif text-2xl font-bold tracking-wider text-slate-900">
                 ANAND<span className="text-gold-600">REALTY</span>

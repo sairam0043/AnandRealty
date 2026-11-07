@@ -76,8 +76,12 @@ export default function Navbar({ onOpenContact, onNavigate }) {
             onClick={(e) => handleLinkClick(e, '#hero')}
             className="flex items-center gap-3 group"
           >
-            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center shadow-md shadow-gold-500/10 border border-gold-300/40 group-hover:scale-105 transition-transform">
-              <span className="font-serif font-bold text-slate-950 text-xl tracking-wider">A</span>
+            <div className="w-12 h-12 rounded-full overflow-hidden shadow-sm border border-slate-200/90 group-hover:scale-105 transition-transform bg-white flex items-center justify-center p-0.5">
+              <img 
+                src="/logo.png" 
+                alt="Anand Realty Logo" 
+                className="w-full h-full object-contain rounded-full"
+              />
             </div>
             <div>
               <span className="font-serif text-xl sm:text-2xl font-bold tracking-wider text-slate-900 block leading-tight">
@@ -140,8 +144,12 @@ export default function Navbar({ onOpenContact, onNavigate }) {
             <div>
               <div className="flex items-center justify-between pb-6 border-b border-slate-200">
                 <div className="flex items-center gap-2.5">
-                  <div className="w-8 h-8 rounded bg-gold-500 flex items-center justify-center font-serif font-bold text-white text-base">
-                    A
+                  <div className="w-9 h-9 rounded-full overflow-hidden border border-slate-200 shadow-sm bg-white flex items-center justify-center p-0.5">
+                    <img 
+                      src="/logo.png" 
+                      alt="Anand Realty Logo" 
+                      className="w-full h-full object-contain rounded-full"
+                    />
                   </div>
                   <span className="font-serif text-lg font-bold text-slate-900">
                     ANAND<span className="text-gold-600">REALTY</span>
