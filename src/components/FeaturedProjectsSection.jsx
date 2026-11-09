@@ -1,15 +1,41 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { featuredProjects } from '../data/websiteData';
-import { ChevronLeft, ChevronRight, ArrowUpRight, Bed, Building, MapPin, Sparkles, ShieldCheck } from 'lucide-react';
+import { ChevronLeft, ChevronRight, ArrowUpRight, Bed, MapPin, ShieldCheck } from 'lucide-react';
 
 export default function FeaturedProjectsSection({ onOpenContact }) {
   const scrollContainerRef = useRef(null);
+  const [isPaused, setIsPaused] = useState(false);
+
+  // Auto-scroll one card to the right every 2 seconds
+  useEffect(() => {
+    if (isPaused) return;
+
+    const interval = setInterval(() => {
+      const container = scrollContainerRef.current;
+      if (!container) return;
+
+      const firstCard = container.querySelector('.snap-start');
+      const cardStep = firstCard ? firstCard.getBoundingClientRect().width + 24 : 380;
+      const maxScrollLeft = container.scrollWidth - container.clientWidth;
+
+      // If reached the end of the carousel, seamlessly loop back to start
+      if (container.scrollLeft >= maxScrollLeft - 15) {
+        container.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        container.scrollBy({ left: cardStep, behavior: 'smooth' });
+      }
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, [isPaused]);
 
   const scroll = (direction) => {
-    if (scrollContainerRef.current) {
-      const scrollAmount = direction === 'left' ? -380 : 380;
-      scrollContainerRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-    }
+    const container = scrollContainerRef.current;
+    if (!container) return;
+    const firstCard = container.querySelector('.snap-start');
+    const cardStep = firstCard ? firstCard.getBoundingClientRect().width + 24 : 380;
+    const scrollAmount = direction === 'left' ? -cardStep : cardStep;
+    container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
   };
 
   const handleProjectInquire = (project) => {
@@ -83,8 +109,14 @@ export default function FeaturedProjectsSection({ onOpenContact }) {
             </div>
           </div>
 
-          {/* Right Column: Sliding Project Cards Carousel (Treysta Style) */}
-          <div className="lg:col-span-8 window-slide-right delay-150">
+          {/* Right Column: Sliding Project Cards Carousel (Treysta Style with 2s Auto-Scroll) */}
+          <div 
+            className="lg:col-span-8 window-slide-right delay-150"
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
+            onTouchStart={() => setIsPaused(true)}
+            onTouchEnd={() => setIsPaused(false)}
+          >
             <div
               ref={scrollContainerRef}
               className="flex gap-6 overflow-x-auto pb-4 pt-2 scroll-smooth no-scrollbar scrollbar-none snap-x snap-mandatory"
@@ -160,4 +192,3 @@ export default function FeaturedProjectsSection({ onOpenContact }) {
     </section>
   );
 }
-
