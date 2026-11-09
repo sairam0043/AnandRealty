@@ -23,9 +23,73 @@ export const siteConfig = {
 
 export const navLinks = [
   { label: "Home", href: "#hero" },
+  { label: "Projects", href: "#projects" },
   { label: "Services", href: "#services" },
   { label: "About Us", href: "#about" },
   { label: "Contact Us", href: "#contact" }
+];
+
+export const featuredProjects = [
+  {
+    id: "grand-residences-gurugram",
+    title: "The Grand Residences",
+    location: "Golf Course Ext. Road, Gurugram",
+    price: "₹2.45 Cr",
+    priceDisplay: "Starting Price: ₹2.45 Cr",
+    possession: "Q4 2026",
+    type: "3 & 4 BHK | Luxury Residences",
+    developer: "DLF Grade-A Partner",
+    image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1000&q=85",
+    tags: ["RERA Approved", "High ROI"]
+  },
+  {
+    id: "skyblade-mumbai",
+    title: "Signature Sky Villas",
+    location: "BKC Corridor, Central Mumbai",
+    price: "₹4.80 Cr",
+    priceDisplay: "Starting Price: ₹4.80 Cr",
+    possession: "Ready to Move",
+    type: "4 & 5 BHK | Sky Duplexes",
+    developer: "Tier-1 Mumbai Developer",
+    image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1000&q=85",
+    tags: ["Sea View", "Exclusive"]
+  },
+  {
+    id: "palm-meadows-bengaluru",
+    title: "Elysian Palm Meadows",
+    location: "Whitefield, Bengaluru",
+    price: "₹3.15 Cr",
+    priceDisplay: "Starting Price: ₹3.15 Cr",
+    possession: "Q2 2027",
+    type: "4 BHK | Private Gated Villas",
+    developer: "Prestige Grade Partner",
+    image: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1000&q=85",
+    tags: ["Private Garden", "Clubhouse"]
+  },
+  {
+    id: "imperial-one-hyderabad",
+    title: "Imperial One Central",
+    location: "Financial District, Hyderabad",
+    price: "₹1.95 Cr",
+    priceDisplay: "Starting Price: ₹1.95 Cr",
+    possession: "New Launch",
+    type: "2 & 3 BHK | High-Rise Condos",
+    developer: "My Home Grade Partner",
+    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=85",
+    tags: ["Tech Corridor", "Pre-Launch Price"]
+  },
+  {
+    id: "aura-plaza-noida",
+    title: "Aura Signature Commercial",
+    location: "Sector 62, Noida (NCR)",
+    price: "₹85 Lakhs",
+    priceDisplay: "Starting Price: ₹85 Lakhs",
+    possession: "Immediate",
+    type: "Grade-A | Retail & Office Spaces",
+    developer: "Institutional Developer",
+    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1000&q=85",
+    tags: ["12% Yield", "Metro Facing"]
+  }
 ];
 
 export const servicesData = [

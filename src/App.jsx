@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import FeaturedProjectsSection from './components/FeaturedProjectsSection';
 import ServicesSection from './components/ServicesSection';
 import AboutSection from './components/AboutSection';
 import ContactSection from './components/ContactSection';
@@ -42,7 +43,10 @@ export default function App() {
         {/* Hero Section with Cinematic Video Background & Search */}
         <Hero onOpenContact={handleOpenLead} />
 
-        {/* Services / Our Expertise - Shown Directly */}
+        {/* Featured Projects - Curated by Anand Realty (Treysta-style Carousel) */}
+        <FeaturedProjectsSection onOpenContact={handleOpenLead} />
+
+        {/* Services / Our Expertise */}
         <ServicesSection onOpenContact={() => handleOpenLead(null)} />
 
         {/* About Anand Realty & Core Values */}

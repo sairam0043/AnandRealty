@@ -6,11 +6,13 @@ export default function LeadModal({ isOpen, onClose, initialData = null }) {
   if (!isOpen) return null;
 
   const defaultRequirement = initialData
-    ? [
-        initialData.propertyType && initialData.propertyType !== 'All' ? `Property Type: ${initialData.propertyType}` : '',
-        initialData.location ? `Location: ${initialData.location}` : '',
-        initialData.budget && initialData.budget !== 'All' ? `Budget: ${initialData.budget}` : ''
-      ].filter(Boolean).join(' | ')
+    ? initialData.project
+      ? `Inquiry for ${initialData.project} (${initialData.location || ''}) - Starting Price: ${initialData.budget || ''}`
+      : [
+          initialData.propertyType && initialData.propertyType !== 'All' ? `Property Type: ${initialData.propertyType}` : '',
+          initialData.location ? `Location: ${initialData.location}` : '',
+          initialData.budget && initialData.budget !== 'All' ? `Budget: ${initialData.budget}` : ''
+        ].filter(Boolean).join(' | ')
     : '';
 
   const [formData, setFormData] = useState({
