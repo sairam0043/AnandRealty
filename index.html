@@ -126,51 +126,54 @@
         box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.08), 0 10px 15px -5px rgba(212, 175, 55, 0.05);
       }
 
-      /* Treysta-Style Sliding Windows Animation on Scroll */
+      /* Treysta-Style Sliding Windows Animation on Scroll - Slow, Refined & Elegant */
       .window-slide-left {
         opacity: 0;
-        transform: translateX(-80px);
-        transition: transform 0.85s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+        transform: translate3d(-50px, 0, 0);
+        transition: transform 1.25s cubic-bezier(0.22, 1, 0.36, 1), opacity 1.25s cubic-bezier(0.22, 1, 0.36, 1);
         will-change: transform, opacity;
+        backface-visibility: hidden;
       }
 
       .window-slide-right {
         opacity: 0;
-        transform: translateX(80px);
-        transition: transform 0.85s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+        transform: translate3d(50px, 0, 0);
+        transition: transform 1.25s cubic-bezier(0.22, 1, 0.36, 1), opacity 1.25s cubic-bezier(0.22, 1, 0.36, 1);
         will-change: transform, opacity;
+        backface-visibility: hidden;
       }
 
       .window-slide-up {
         opacity: 0;
-        transform: translateY(50px);
-        transition: transform 0.85s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+        transform: translate3d(0, 36px, 0);
+        transition: transform 1.25s cubic-bezier(0.22, 1, 0.36, 1), opacity 1.25s cubic-bezier(0.22, 1, 0.36, 1);
         will-change: transform, opacity;
+        backface-visibility: hidden;
       }
 
-      /* Triggered on viewport intersection */
+      /* Triggered smoothly on viewport intersection */
       .window-revealed.window-slide-left,
       .window-revealed.window-slide-right,
       .window-revealed.window-slide-up {
         opacity: 1 !important;
-        transform: translate(0, 0) !important;
+        transform: translate3d(0, 0, 0) !important;
       }
 
-      /* Stagger Delays */
-      .delay-100 { transition-delay: 100ms; }
-      .delay-150 { transition-delay: 150ms; }
-      .delay-200 { transition-delay: 200ms; }
-      .delay-250 { transition-delay: 250ms; }
-      .delay-300 { transition-delay: 300ms; }
-      .delay-400 { transition-delay: 400ms; }
-      .delay-500 { transition-delay: 500ms; }
+      /* Stagger Delays - Cascading Smoothly */
+      .delay-100 { transition-delay: 120ms; }
+      .delay-150 { transition-delay: 180ms; }
+      .delay-200 { transition-delay: 240ms; }
+      .delay-250 { transition-delay: 300ms; }
+      .delay-300 { transition-delay: 360ms; }
+      .delay-400 { transition-delay: 480ms; }
+      .delay-500 { transition-delay: 600ms; }
 
       @media (max-width: 640px) {
         .window-slide-left {
-          transform: translateX(-35px);
+          transform: translate3d(-25px, 0, 0);
         }
         .window-slide-right {
-          transform: translateX(35px);
+          transform: translate3d(25px, 0, 0);
         }
       }
     </style>
