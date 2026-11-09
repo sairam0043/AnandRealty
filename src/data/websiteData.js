@@ -24,9 +24,11 @@ export const siteConfig = {
 export const navLinks = [
   { label: "Home", href: "#hero" },
   { label: "Projects", href: "#projects" },
+  { label: "Cities", href: "#city-hubs" },
   { label: "Services", href: "#services" },
+  { label: "EMI Calculator", href: "#calculator" },
   { label: "About Us", href: "#about" },
-  { label: "Contact Us", href: "#contact" }
+  { label: "Contact", href: "#contact" }
 ];
 
 export const featuredProjects = [

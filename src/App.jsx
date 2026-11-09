@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import FeaturedProjectsSection from './components/FeaturedProjectsSection';
+import CityHubsSection from './components/CityHubsSection';
 import ServicesSection from './components/ServicesSection';
+import CalculatorSection from './components/CalculatorSection';
 import AboutSection from './components/AboutSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
@@ -46,8 +48,14 @@ export default function App() {
         {/* Featured Projects - Curated by Anand Realty (Treysta-style Carousel) */}
         <FeaturedProjectsSection onOpenContact={handleOpenLead} />
 
+        {/* Prime City Hubs & High-Growth Corridors */}
+        <CityHubsSection onOpenContact={handleOpenLead} />
+
         {/* Services / Our Expertise */}
         <ServicesSection onOpenContact={() => handleOpenLead(null)} />
+
+        {/* Interactive Real Estate EMI & Investment Calculator */}
+        <CalculatorSection onOpenContact={handleOpenLead} />
 
         {/* About Anand Realty & Core Values */}
         <AboutSection onOpenContact={() => handleOpenLead(null)} />
