@@ -1,6 +1,5 @@
 import React from 'react';
-import { siteConfig } from '../data/websiteData';
-import { ArrowUpRight, Phone, MapPin, ShieldCheck, Sparkles } from 'lucide-react';
+import { ArrowUpRight, ShieldCheck, Sparkles } from 'lucide-react';
 
 export default function Hero({ onOpenContact }) {
   const scrollToSection = (id) => {
@@ -38,7 +37,7 @@ export default function Hero({ onOpenContact }) {
 
         {/* Tagline */}
         <p className="mt-4 sm:mt-6 text-lg sm:text-2xl font-serif text-slate-800 tracking-wide font-medium">
-          {siteConfig.tagline}
+          Built on Loyalty, Transparency & Trust
         </p>
 
         {/* Subtitle / Value Proposition */}
@@ -64,40 +63,34 @@ export default function Hero({ onOpenContact }) {
           </button>
         </div>
 
-        {/* Trust Points / Highlights */}
-        <div className="mt-14 pt-10 border-t border-slate-200/80 w-full grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl text-left">
-          <div className="flex items-start gap-3 p-3.5 rounded-xl bg-white/95 border border-slate-200 shadow-sm backdrop-blur-sm">
-            <div className="p-2 rounded-lg bg-gold-50 text-gold-600 border border-gold-200/60">
-              <MapPin className="w-5 h-5" />
+        {/* Official Verification Badge */}
+        <div className="mt-12 pt-8 border-t border-slate-200/80 w-full flex justify-center">
+          <div className="inline-flex items-center gap-4 px-6 py-3.5 rounded-2xl bg-white/95 border border-slate-200/90 shadow-md shadow-slate-200/50 backdrop-blur-sm hover:border-gold-400/80 transition-all">
+            {/* Real Badge Shield Emblem */}
+            <div className="relative w-11 h-11 rounded-xl bg-gradient-to-br from-emerald-500 to-emerald-700 flex items-center justify-center text-white shadow-md shadow-emerald-600/25 shrink-0 border border-emerald-400/50">
+              <ShieldCheck className="w-6 h-6 text-white" />
+              <div className="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-gold-400 border-2 border-white flex items-center justify-center text-[9px] font-black text-slate-950">
+                ✓
+              </div>
             </div>
-            <div>
-              <div className="text-xs text-slate-500 uppercase tracking-wider font-semibold">Headquarters</div>
-              <div className="text-sm font-bold text-slate-800 mt-0.5">India</div>
-            </div>
-          </div>
 
-          <div className="flex items-start gap-3 p-3.5 rounded-xl bg-white/95 border border-slate-200 shadow-sm backdrop-blur-sm">
-            <div className="p-2 rounded-lg bg-gold-50 text-gold-600 border border-gold-200/60">
-              <Phone className="w-5 h-5" />
-            </div>
-            <div>
-              <div className="text-xs text-slate-500 uppercase tracking-wider font-semibold">Advisory Line</div>
-              <a href={`tel:${siteConfig.phone}`} className="text-sm font-bold text-slate-800 hover:text-gold-600 transition-colors mt-0.5 block">
-                {siteConfig.phoneDisplay}
-              </a>
-            </div>
-          </div>
-
-          <div className="flex items-start gap-3 p-3.5 rounded-xl bg-white/95 border border-slate-200 shadow-sm backdrop-blur-sm">
-            <div className="p-2 rounded-lg bg-gold-50 text-gold-600 border border-gold-200/60">
-              <ShieldCheck className="w-5 h-5" />
-            </div>
-            <div>
-              <div className="text-xs text-slate-500 uppercase tracking-wider font-semibold">Verification</div>
-              <div className="text-sm font-bold text-slate-800 mt-0.5">RERA Compliant & Verified Listings</div>
+            <div className="text-left">
+              <div className="flex items-center gap-2">
+                <span className="text-[11px] font-bold tracking-widest uppercase text-emerald-700 bg-emerald-50 border border-emerald-200/80 px-2 py-0.5 rounded-md">
+                  RERA VERIFIED
+                </span>
+                <span className="text-[11px] text-slate-400 font-medium">•</span>
+                <span className="text-[11px] text-slate-500 font-semibold tracking-wider uppercase">
+                  Govt. of India Act Compliant
+                </span>
+              </div>
+              <div className="text-sm sm:text-base font-bold text-slate-900 mt-0.5">
+                100% Verified Listings & Approved Documentation
+              </div>
             </div>
           </div>
         </div>
+
       </div>
     </section>
   );
