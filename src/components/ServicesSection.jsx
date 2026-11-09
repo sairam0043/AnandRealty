@@ -20,27 +20,34 @@ export default function ServicesSection({ onOpenContact }) {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gold-50 border border-gold-200 text-gold-700 text-xs font-bold uppercase tracking-widest mb-3">
+          <div className="window-slide-left inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gold-50 border border-gold-200 text-gold-700 text-xs font-bold uppercase tracking-widest mb-3">
             <Sparkles className="w-3.5 h-3.5 text-gold-600" />
             Comprehensive Real Estate Solutions
           </div>
-          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 mt-1">
+          <h2 className="window-slide-left font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 mt-1">
             Our Expertise
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-gold-500 to-gold-400 mx-auto mt-4 rounded-full" />
-          <p className="mt-4 text-slate-600 text-sm sm:text-base leading-relaxed">
+          <div className="window-slide-left w-20 h-1 bg-gradient-to-r from-gold-500 to-gold-400 mx-auto mt-4 rounded-full" />
+          <p className="window-slide-right delay-100 mt-4 text-slate-600 text-sm sm:text-base leading-relaxed">
             At Anand Realty, we focus on what matters most — delivering measurable real estate solutions, safeguarding client investments, and unlocking prime residential and commercial opportunities across India.
           </p>
         </div>
 
-        {/* 3-Column Services Grid with Treysta-Style Luxury Hover Effects */}
+        {/* 3-Column Services Grid with Treysta-Style Sliding Windows */}
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
-          {servicesData.map((service) => {
+          {servicesData.map((service, index) => {
             const Icon = iconMap[service.icon] || Building2;
+            const slideClass = 
+              index === 0 
+                ? 'window-slide-left delay-150' 
+                : index === 1 
+                ? 'window-slide-up delay-250' 
+                : 'window-slide-right delay-350';
+
             return (
               <div
                 key={service.id}
-                className="card-shine group relative rounded-2xl bg-white border border-slate-200/90 hover:border-gold-400/90 overflow-hidden flex flex-col justify-between shadow-sm cursor-pointer"
+                className={`${slideClass} card-shine group relative rounded-2xl bg-white border border-slate-200/90 hover:border-gold-400/90 overflow-hidden flex flex-col justify-between shadow-sm cursor-pointer`}
                 onClick={() => setSelectedService(service)}
               >
                 {/* Image Container with Dynamic Zoom */}

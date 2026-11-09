@@ -8,8 +8,11 @@ import Footer from './components/Footer';
 import LegalModal from './components/LegalModal';
 import LeadModal from './components/LeadModal';
 import FloatingActions from './components/FloatingActions';
+import { useWindowSlideReveal } from './hooks/useScrollReveal';
 
 export default function App() {
+  useWindowSlideReveal();
+
   const [legalModalType, setLegalModalType] = useState(null); // 'privacy' | 'accessibility' | null
   const [leadModalOpen, setLeadModalOpen] = useState(false);
   const [leadModalData, setLeadModalData] = useState(null);

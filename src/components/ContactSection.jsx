@@ -31,7 +31,7 @@ export default function ContactSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto">
+        <div className="text-center max-w-3xl mx-auto window-slide-up">
           <span className="text-xs font-bold uppercase tracking-widest text-gold-600">
             Start Your Journey
           </span>
@@ -46,8 +46,8 @@ export default function ContactSection() {
 
         <div className="mt-16 grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           
-          {/* Contact Information & Office Details */}
-          <div className="lg:col-span-5 space-y-6">
+          {/* Contact Information & Office Details - Slides in from Left Window */}
+          <div className="lg:col-span-5 space-y-6 window-slide-left delay-100">
             <div className="p-8 rounded-2xl bg-white border border-slate-200 space-y-6 shadow-md hover:shadow-lg transition-shadow">
               <h3 className="font-serif text-2xl font-bold text-slate-900">
                 Contact Information
@@ -130,8 +130,8 @@ export default function ContactSection() {
             </div>
           </div>
 
-          {/* Contact Form Card with Interactive Elevation */}
-          <div className="lg:col-span-7">
+          {/* Contact Form Card with Interactive Elevation - Slides in from Right Window */}
+          <div className="lg:col-span-7 window-slide-right delay-200">
             <div className="p-8 sm:p-10 rounded-2xl bg-white border border-slate-200 shadow-xl hover:shadow-2xl transition-shadow">
               {submitted ? (
                 <div className="py-12 text-center space-y-4 animate-scale-up">
