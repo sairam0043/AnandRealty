@@ -2,14 +2,22 @@ import React, { useState } from 'react';
 import { siteConfig } from '../data/websiteData';
 import { X, Send, CheckCircle2, ShieldCheck } from 'lucide-react';
 
-export default function LeadModal({ isOpen, onClose }) {
+export default function LeadModal({ isOpen, onClose, initialData = null }) {
   if (!isOpen) return null;
+
+  const defaultRequirement = initialData
+    ? [
+        initialData.propertyType && initialData.propertyType !== 'All' ? `Property Type: ${initialData.propertyType}` : '',
+        initialData.location ? `Location: ${initialData.location}` : '',
+        initialData.budget && initialData.budget !== 'All' ? `Budget: ${initialData.budget}` : ''
+      ].filter(Boolean).join(' | ')
+    : '';
 
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
-    requirement: ''
+    requirement: defaultRequirement || ''
   });
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);

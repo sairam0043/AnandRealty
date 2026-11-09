@@ -12,6 +12,12 @@ import FloatingActions from './components/FloatingActions';
 export default function App() {
   const [legalModalType, setLegalModalType] = useState(null); // 'privacy' | 'accessibility' | null
   const [leadModalOpen, setLeadModalOpen] = useState(false);
+  const [leadModalData, setLeadModalData] = useState(null);
+
+  const handleOpenLead = (data = null) => {
+    setLeadModalData(data);
+    setLeadModalOpen(true);
+  };
 
   const handleNavigate = (href) => {
     const el = document.querySelector(href);
@@ -24,20 +30,20 @@ export default function App() {
     <div className="min-h-screen bg-slate-50 text-slate-900 selection:bg-gold-400 selection:text-white flex flex-col font-sans">
       {/* Navigation */}
       <Navbar 
-        onOpenContact={() => setLeadModalOpen(true)} 
+        onOpenContact={() => handleOpenLead(null)} 
         onNavigate={handleNavigate}
       />
 
       {/* Main Content */}
       <main className="flex-1">
-        {/* Hero Section */}
-        <Hero onOpenContact={() => setLeadModalOpen(true)} />
+        {/* Hero Section with Cinematic Video Background & Search */}
+        <Hero onOpenContact={handleOpenLead} />
 
         {/* Services / Our Expertise - Shown Directly */}
-        <ServicesSection onOpenContact={() => setLeadModalOpen(true)} />
+        <ServicesSection onOpenContact={() => handleOpenLead(null)} />
 
         {/* About Anand Realty & Core Values */}
-        <AboutSection onOpenContact={() => setLeadModalOpen(true)} />
+        <AboutSection onOpenContact={() => handleOpenLead(null)} />
 
         {/* Dedicated Contact Section */}
         <ContactSection />
@@ -50,12 +56,16 @@ export default function App() {
       />
 
       {/* Floating CTA & WhatsApp Action Buttons */}
-      <FloatingActions onOpenContact={() => setLeadModalOpen(true)} />
+      <FloatingActions onOpenContact={() => handleOpenLead(null)} />
 
       {/* Lead Capture Modal */}
       <LeadModal 
         isOpen={leadModalOpen} 
-        onClose={() => setLeadModalOpen(false)} 
+        initialData={leadModalData}
+        onClose={() => {
+          setLeadModalOpen(false);
+          setLeadModalData(null);
+        }} 
       />
 
       {/* Legal & Policy Modal (Privacy Policy & Accessibility Statement) */}
