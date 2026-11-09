@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import QuickContactBar from './components/QuickContactBar';
 import ServicesSection from './components/ServicesSection';
 import AboutSection from './components/AboutSection';
 import ContactSection from './components/ContactSection';
@@ -34,10 +33,7 @@ export default function App() {
         {/* Hero Section */}
         <Hero onOpenContact={() => setLeadModalOpen(true)} />
 
-        {/* Quick Contact / Requirement Submission Bar */}
-        <QuickContactBar />
-
-        {/* Services / Our Expertise */}
+        {/* Services / Our Expertise - Shown Directly */}
         <ServicesSection onOpenContact={() => setLeadModalOpen(true)} />
 
         {/* About Anand Realty & Core Values */}
