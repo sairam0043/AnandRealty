@@ -160,3 +160,4 @@ export default function FeaturedProjectsSection({ onOpenContact }) {
     </section>
   );
 }
+

@@ -159,14 +159,14 @@
         transform: translate3d(0, 0, 0) !important;
       }
 
-      /* Stagger Delays - Cascading Smoothly */
-      .delay-100 { transition-delay: 120ms; }
-      .delay-150 { transition-delay: 180ms; }
-      .delay-200 { transition-delay: 240ms; }
-      .delay-250 { transition-delay: 300ms; }
-      .delay-300 { transition-delay: 360ms; }
-      .delay-400 { transition-delay: 480ms; }
-      .delay-500 { transition-delay: 600ms; }
+      /* Stagger Delays - Cascading Smoothly only when entering view */
+      .window-revealed.delay-100 { transition-delay: 120ms; }
+      .window-revealed.delay-150 { transition-delay: 180ms; }
+      .window-revealed.delay-200 { transition-delay: 240ms; }
+      .window-revealed.delay-250 { transition-delay: 300ms; }
+      .window-revealed.delay-300 { transition-delay: 360ms; }
+      .window-revealed.delay-400 { transition-delay: 480ms; }
+      .window-revealed.delay-500 { transition-delay: 600ms; }
 
       @media (max-width: 640px) {
         .window-slide-left {
